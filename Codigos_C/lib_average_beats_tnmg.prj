@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2021a">
-  <configuration build-checksum="4199364061" file="D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\lib_average_beats_tnmg.prj" location="D:\Doutorado\SNR\Implementação_TNMG\Codigos_C" name="lib_average_beats_tnmg" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="1346835410" file="D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\lib_average_beats_tnmg.prj" location="D:\Doutorado\SNR\Implementação_TNMG\Codigos_C" name="lib_average_beats_tnmg" preferred-package-location="D:\Doutorado\SNR\Implementação_TNMG\Codigos_C" preferred-package-type="package.type.zip.flat" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
@@ -31,14 +31,14 @@
       <param.CppStyleConst>false</param.CppStyleConst>
       <param.EnableDebugging>false</param.EnableDebugging>
       <param.Verbosity>option.Verbosity.Info</param.Verbosity>
-      <param.ReportPotentialDifferences>true</param.ReportPotentialDifferences>
+      <param.ReportPotentialDifferences>false</param.ReportPotentialDifferences>
       <param.GenerateReport>true</param.GenerateReport>
       <param.LaunchReport>false</param.LaunchReport>
       <param.ReportInfoVarName />
       <param.DefaultTestFile />
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.VerificationMode>option.VerificationMode.None</param.VerificationMode>
-      <param.VerificationStatus>option.VerificationStatus.FailedTest</param.VerificationStatus>
+      <param.VerificationStatus>option.VerificationStatus.Passed</param.VerificationStatus>
       <param.EnableMexProfiling>false</param.EnableMexProfiling>
       <var.BuiltWithMexProfiling>false</var.BuiltWithMexProfiling>
       <param.CustomSourceCode />
@@ -214,9 +214,9 @@
       <param.ReservedNameArray />
       <param.CppStyleConst>false</param.CppStyleConst>
       <param.RuntimeChecks>false</param.RuntimeChecks>
-      <param.Verbose />
+      <param.Verbose>false</param.Verbose>
       <param.Verbosity>option.Verbosity.Info</param.Verbosity>
-      <param.ReportPotentialDifferences>true</param.ReportPotentialDifferences>
+      <param.ReportPotentialDifferences>false</param.ReportPotentialDifferences>
       <param.GenerateReport>true</param.GenerateReport>
       <param.GenerateCodeMetricsReport>false</param.GenerateCodeMetricsReport>
       <param.GenerateCodeReplacementReport>false</param.GenerateCodeReplacementReport>
@@ -243,7 +243,7 @@
       <param.PostCodeGenCommand />
       <param.TargetLangStandard>Auto</param.TargetLangStandard>
       <param.CodeReplacementLibrary>None</param.CodeReplacementLibrary>
-      <param.DeprecatedCRLFlag />
+      <param.DeprecatedCRLFlag>false</param.DeprecatedCRLFlag>
       <param.SameHardware>true</param.SameHardware>
       <param.Toolchain>Automatically locate an installed toolchain</param.Toolchain>
       <param.BuildConfiguration>Faster Runs</param.BuildConfiguration>
@@ -254,7 +254,7 @@
       <param.target.ActiveTarget />
       <param.HardwareVendor.Production>Generic</param.HardwareVendor.Production>
       <param.HardwareType.Production>MATLAB Host Computer</param.HardwareType.Production>
-      <param.HWDeviceType.Production />
+      <param.HWDeviceType.Production>Generic-&gt;MATLAB Host Computer</param.HWDeviceType.Production>
       <var.instance.enabled.Production>true</var.instance.enabled.Production>
       <param.HardwareSizeChar.Production>8</param.HardwareSizeChar.Production>
       <param.HardwareSizeShort.Production>16</param.HardwareSizeShort.Production>
@@ -275,7 +275,7 @@
       <param.HardwareDivisionRounding.Production>option.HardwareDivisionRounding.Zero</param.HardwareDivisionRounding.Production>
       <param.HardwareVendor.Target>Generic</param.HardwareVendor.Target>
       <param.HardwareType.Target>MATLAB Host Computer</param.HardwareType.Target>
-      <param.HWDeviceType.Target />
+      <param.HWDeviceType.Target>Generic-&gt;MATLAB Host Computer</param.HWDeviceType.Target>
       <var.instance.enabled.Target>false</var.instance.enabled.Target>
       <param.HardwareSizeChar.Target>8</param.HardwareSizeChar.Target>
       <param.HardwareSizeShort.Target>16</param.HardwareSizeShort.Target>
@@ -334,14 +334,14 @@
       <param.EnableGitSupport>false</param.EnableGitSupport>
       <param.EnableAutoCommit>false</param.EnableAutoCommit>
       <param.RepositoryStyle>option.RepositoryStyle.Auto</param.RepositoryStyle>
-      <param.psCustomPrjState />
+      <param.psCustomPrjState>false</param.psCustomPrjState>
       <param.psCustomProjectFile />
-      <param.psCheckConfValue />
-      <param.psUniqueOutPutState />
-      <param.psOpenResultsState />
-      <param.psProductModeValue />
-      <param.psQuickConfValue />
-      <param.psOutputFolder />
+      <param.psCheckConfValue>option.psCheckConfValue.onWarnCheckConfDlg</param.psCheckConfValue>
+      <param.psUniqueOutPutState>true</param.psUniqueOutPutState>
+      <param.psOpenResultsState>true</param.psOpenResultsState>
+      <param.psProductModeValue>option.psProductModeValue.codeProver</param.psProductModeValue>
+      <param.psQuickConfValue>option.psQuickConfValue.proj</param.psQuickConfValue>
+      <param.psOutputFolder>results_$codegenName$</param.psOutputFolder>
       <unset>
         <param.WorkingFolder />
         <param.SpecifiedWorkingFolder />
@@ -868,33 +868,17 @@
       </unset>
     </profile>
     <param.objective>option.objective.c</param.objective>
-    <param.WorkflowStep>verifyCompatibility</param.WorkflowStep>
+    <param.WorkflowStep>workflowSummary</param.WorkflowStep>
     <param.TestSnippets>
       <item>make_snr_TNMG</item>
     </param.TestSnippets>
     <param.ExternalFcnMajority>column</param.ExternalFcnMajority>
-    <param.UseGlobals>option.UseGlobals.Yes</param.UseGlobals>
+    <param.UseGlobals>option.UseGlobals.No</param.UseGlobals>
     <param.outputfile>${PROJECT_ROOT}\codegen\lib\average_beats_tnmg\average_beats_tnmg.lib</param.outputfile>
     <param.version>R2012a</param.version>
     <param.HasECoderFeatures>false</param.HasECoderFeatures>
     <param.HasGpuCoder>false</param.HasGpuCoder>
     <var.HasNeuralNetworkToolbox>true</var.HasNeuralNetworkToolbox>
-    <param.newGlobals>
-      <Globals>
-        <Input Name="g" typeId="0" />
-        <idpTable>
-          <type typeId="0">
-            <Class>double</Class>
-            <Size>1 x :inf</Size>
-            <Value />
-            <InitialValue />
-            <UserDefined>true</UserDefined>
-            <Complex>false</Complex>
-            <Sparse>false</Sparse>
-          </type>
-        </idpTable>
-      </Globals>
-    </param.newGlobals>
     <param.mex.mainhtml />
     <param.grt.mainhtml />
     <param.CallGeneratedCodeFromTest>true</param.CallGeneratedCodeFromTest>
@@ -905,23 +889,23 @@
     <param.AutoInferUnboundedSizeThreshold>2048</param.AutoInferUnboundedSizeThreshold>
     <param.EnableFixedPointStep>false</param.EnableFixedPointStep>
     <param.EnableScreener>true</param.EnableScreener>
-    <param.AnnotationChecksum>3639231677</param.AnnotationChecksum>
+    <param.AnnotationChecksum>458658787</param.AnnotationChecksum>
     <var.LegacyTarget />
     <var.MirrorOnOpen>false</var.MirrorOnOpen>
     <param.FixedPointEnabled>false</param.FixedPointEnabled>
     <var.redirectedInputTypeData />
     <var.DismissScreener>false</var.DismissScreener>
     <param.unifiedParamStorage />
-    <var.gc.lastOutputRoot />
-    <var.gc.lastOutputType />
-    <var.gc.preBuildChecksum />
+    <var.gc.lastOutputRoot>codegen\lib\average_beats_tnmg</var.gc.lastOutputRoot>
+    <var.gc.lastOutputType>C_CODE</var.gc.lastOutputType>
+    <var.gc.preBuildChecksum>1346835410</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot>codegen\mex\average_beats_tnmg_mex</var.cfi.lastOutputRoot>
-    <var.cfi.preBuildChecksum>4199364061</var.cfi.preBuildChecksum>
+    <var.cfi.preBuildChecksum>2648925427</var.cfi.preBuildChecksum>
     <var.lastCfiTestSnippet>make_snr_TNMG</var.lastCfiTestSnippet>
     <var.outdatedOnRestore>false</var.outdatedOnRestore>
-    <var.lastUserSourceChecksum />
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\average_beats_tnmg.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\ECG_peak_detect_mod_with_derivative.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\my_butter_coeffs.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\myfiltfilt.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\peakdetect.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;2626905582&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
     <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\average_beats_tnmg.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\ECG_peak_detect_mod_with_derivative.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\my_butter_coeffs.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\myfiltfilt.m&lt;/file&gt;&lt;file&gt;D:\Doutorado\SNR\Implementação_TNMG\Codigos_C\peakdetect.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
-    <param.forceMexBuild>true</param.forceMexBuild>
+    <param.forceMexBuild>false</param.forceMexBuild>
     <param.NoDefaultJIT>false</param.NoDefaultJIT>
     <param.configImportActive>false</param.configImportActive>
     <var.isGpuCoder>false</var.isGpuCoder>
@@ -946,7 +930,7 @@
     <param.gpu.StackLimitPerThread>1024</param.gpu.StackLimitPerThread>
     <param.gpu.MaximumBlocksPerKernel>0</param.gpu.MaximumBlocksPerKernel>
     <param.gpu.Benchmarking>false</param.gpu.Benchmarking>
-    <param.gpu.SafeBuild>true</param.gpu.SafeBuild>
+    <param.gpu.SafeBuild>false</param.gpu.SafeBuild>
     <param.gpu.KernelNamePrefix />
     <param.gpu.CompilerFlags />
     <param.gpu.EnableCUBLAS>false</param.gpu.EnableCUBLAS>
@@ -957,9 +941,9 @@
     <var.isDeepLearningForMatlabCoderEnabled>true</var.isDeepLearningForMatlabCoderEnabled>
     <param.deeplearning.EnableDeepLearning>false</param.deeplearning.EnableDeepLearning>
     <param.deeplearning.TargetLib>option.deeplearning.targetlibrary.none</param.deeplearning.TargetLib>
-    <var.cfiTargetLibSuppression>true</var.cfiTargetLibSuppression>
-    <var.hasMatlabDeepLearningSupportPackage>false</var.hasMatlabDeepLearningSupportPackage>
-    <var.hasGpuDeepLearningSupportPackage>false</var.hasGpuDeepLearningSupportPackage>
+    <var.cfiTargetLibSuppression>false</var.cfiTargetLibSuppression>
+    <var.hasMatlabDeepLearningSupportPackage>true</var.hasMatlabDeepLearningSupportPackage>
+    <var.hasGpuDeepLearningSupportPackage>true</var.hasGpuDeepLearningSupportPackage>
     <param.tensorrt.DataType>option.tensorrt.datatype.fp32</param.tensorrt.DataType>
     <param.tensorrt.DataPath />
     <param.tensorrt.NumCalibrationBatches>0</param.tensorrt.NumCalibrationBatches>
@@ -1021,6 +1005,7 @@
     <unset>
       <param.objective />
       <param.ExternalFcnMajority />
+      <param.UseGlobals />
       <param.outputfile />
       <param.version />
       <param.HasECoderFeatures />
@@ -1042,11 +1027,8 @@
       <var.redirectedInputTypeData />
       <var.DismissScreener />
       <param.unifiedParamStorage />
-      <var.gc.lastOutputRoot />
-      <var.gc.lastOutputType />
-      <var.gc.preBuildChecksum />
       <var.outdatedOnRestore />
-      <var.lastUserSourceChecksum />
+      <param.forceMexBuild />
       <param.NoDefaultJIT />
       <param.configImportActive />
       <var.isGpuCoder />
@@ -1079,6 +1061,9 @@
       <var.isDeepLearningForMatlabCoderEnabled />
       <param.deeplearning.EnableDeepLearning />
       <param.deeplearning.TargetLib />
+      <var.cfiTargetLibSuppression />
+      <var.hasMatlabDeepLearningSupportPackage />
+      <var.hasGpuDeepLearningSupportPackage />
       <param.tensorrt.DataType />
       <param.tensorrt.DataPath />
       <param.tensorrt.NumCalibrationBatches />
@@ -1139,19 +1124,19 @@
     </unset>
     <fileset.entrypoints>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\average_beats_tnmg.m">
-        <Marker>1632145457351</Marker>
+        <Marker>1632270529527</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\ECG_peak_detect_mod_with_derivative.m">
-        <Marker>1632146917081</Marker>
+        <Marker>1632270543768</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\my_butter_coeffs.m">
-        <Marker>1632148332230</Marker>
+        <Marker>1632270564246</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\myfiltfilt.m">
-        <Marker>1632147669412</Marker>
+        <Marker>1632270887132</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\peakdetect.m">
-        <Marker>1632145568633</Marker>
+        <Marker>1632270621096</Marker>
       </file>
     </fileset.entrypoints>
     <fileset.testbench>
@@ -1184,12 +1169,13 @@
               <Sparse>false</Sparse>
             </type>
             <type typeId="2">
-              <Class>int32</Class>
+              <Class>double</Class>
               <Size>1 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>true</UserDefined>
               <Complex>false</Complex>
+              <Sparse>false</Sparse>
             </type>
             <type typeId="3">
               <Class>double</Class>
@@ -1259,7 +1245,7 @@
           <Input Name="b" typeId="0" />
           <Input Name="a" typeId="0" />
           <Input Name="y" typeId="1" />
-          <Input Name="zi" typeId="0" />
+          <Input Name="zi" typeId="2" />
           <idpTable>
             <type typeId="0">
               <Class>double</Class>
@@ -1273,6 +1259,15 @@
             <type typeId="1">
               <Class>double</Class>
               <Size>:inf x 1</Size>
+              <Value />
+              <InitialValue />
+              <UserDefined>true</UserDefined>
+              <Complex>false</Complex>
+              <Sparse>false</Sparse>
+            </type>
+            <type typeId="2">
+              <Class>double</Class>
+              <Size>3 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>true</UserDefined>

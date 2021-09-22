@@ -19,12 +19,14 @@ end
 function Y = myfilter(b, a, X, z)
 % all inputs MUST be column vectors
 n    = length(a);
-z(n) = 0;      % Creates zeros if input z is omitted
+z2 = zeros(1,4);
+z2 = [z; 0];
+% z(n) = 0;      % Creates zeros if input z is omitted
 Y    = zeros(size(X));
 for m = 1:length(Y)
    Y(m) = b(1) * X(m) + z(1);
    for i = 2:n
-      z(i - 1) = b(i) * X(m) + z(i) - a(i) * Y(m);
+      z2(i - 1) = b(i) * X(m) + z2(i) - a(i) * Y(m);
    end
 end
 end
