@@ -1,4 +1,4 @@
-function [vcg_peaks_pos,peak_threshold,vcg,vcg2]=ECG_peak_detect_mod(ecg,Fs)%,vcg_type)
+function [vcg_peaks_pos,peak_threshold,vcg,vcg2]=ECG_peak_detect_mod_with_derivative(ecg,Fs)%,vcg_type)
 
 if nargin<3
     vcg_type='simplified';

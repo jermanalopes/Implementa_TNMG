@@ -160,38 +160,4 @@ end
 
 
 
-% 
-%% teste
-% x = ecg(1,1:700);
-% figure
-% set(0,'defaulttextinterpreter','latex')
-% subplot(2,2,[1,2]);
-% plot(x, 'k')
-% title('Lead I (700 samples)', 'FontSize',12);
-% ylabel('Amplitude (uV)', 'FontSize',12);
-% xlabel('Samples number', 'FontSize',12);
-% 
-% hold on
-% R_pos1 = R_pos(1:2);
-% plot(R_pos1, x(:,R_pos1), '*r')
-% subplot(2,2,3);
-% y = squeeze(beats(1,1,:))
-% plot(y, '-k')
-% title('Beat 1( 300 samples)', 'FontSize',12);
-% ylabel('Amplitude (uV)', 'FontSize',12);
-% xlabel('Samples number', 'FontSize',12);
-% 
-% subplot(2,2,4);
-% y = squeeze(beats(2,1,:))
-% plot(y, '-k')
-% title('Beat 2( 300 samples)', 'FontSize',12);
-% ylabel('Amplitude (uV)', 'FontSize',12);
-% xlabel('Samples number', 'FontSize',12);
-% 
-% set(gcf,'renderer','Painters')
-% print -depsc -tiff -r300 -painters beatselect.eps
-% 
-% 
-
-
 
