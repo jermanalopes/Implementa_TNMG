@@ -28,4 +28,6 @@ end
 [b,a]=butter(3,fc/fs*2,filter_type);
 b=b(:); a=a(:);
 nfilt=length(a);
-zi = ( eye(nfilt-1) - [-a(2:nfilt), [eye(nfilt-2); zeros(1,nfilt-2)]] ) \ ( b(2:nfilt) - b(1)*a(2:nfilt) ); % NOTE eye is a function that creates an identity matrix;
+zi = [( eye(nfilt-1) - [-a(2:nfilt), [eye(nfilt-2); zeros(1,nfilt-2)]] ) \ ( b(2:nfilt) - b(1)*a(2:nfilt));0]; % NOTE eye is a function that creates an identity matrix;
+
+end

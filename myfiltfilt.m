@@ -2,9 +2,7 @@ function y =myfiltfilt(b,a,y,zi)
 % all inputs MUST be column vectors
 
 nfact = 3*(length(a)-1);
-y_or = y;
 % Cria uma versão expandida em 2*nfact
-%teste = [2*y(1)-y(nfact+1:-1:2); y; 2*y(end)-y(end-1:-1:end-nfact)];
 y = [2*y(1)-y(nfact+1:-1:2); y; 2*y(end)-y(end-1:-1:end-nfact)];
 y = double(y);
 
@@ -20,7 +18,7 @@ end
 function Y = myfilter(b, a, X, z)
 % all inputs MUST be column vectors
 n    = length(a);
-z(n) = 0;      % Creates zeros if input z is omitted
+% z = [z; 0];      % Creates zeros if input z is omitted
 Y    = zeros(size(X));
 for m = 1:length(Y)
    Y(m) = b(1) * X(m) + z(1);

@@ -21,6 +21,8 @@ clc
 ud.nr_leads=12;
 xls_table={};
 
+[R_pos,SNR] = make_SNR(d{1}.data)
+
 %%
 for n_samples=1:length(d{1}.data)
    id_exam = d{1}.data{n_samples}.exam_nr;
@@ -31,14 +33,33 @@ for n_samples=1:length(d{1}.data)
    if (fs == 600); fltn=3; end
    nan_int=round(0.5*fs);
    mask_nan=1:nan_int; 
-   ecg_tmp = zeros(size(d{1}.data{n_samples}.ecg{1}));    
+   ecg_tmp = zeros(size(d{1}.data{n_samples}.ecg{1})); 
    for der=1:ud.nr_leads % Aplica o filtro Butterworth com os coef. calculados em my_butter_coeffs
        signal = double(d{1}.data{n_samples}.ecg{1}(der,:));
        signal = signal*resolution_microV; 
-%         signal = signal*3.9000000953674316; 
        ecg_tmp(der,:)=myfiltfilt(ud.B{fltn},ud.A{fltn},signal',ud.ZI{fltn});
    end
    ecg_tmp(:,[mask_nan length(ecg_tmp)-mask_nan+1])=NaN; 
+      for n=1:12
+%         r = (d{1, 1}.data{1, 1}.ecg{1, 1}(n,:))' 
+        r = (ecg_tmp(n,:))';
+        % r = round(y,0)
+        teste = regexprep(num2str(r'),'\s+',',')
+        % intstr = num2str(round(d{1, 1}.data{1, 3}.ecg{1, 1}(1,:)),0);
+        hashcode(teste)
+      end
+   
+      %% Filtro
+      r = (ud.B{fltn});
+      teste = regexprep(num2str(r'),'\s+',',');
+      hashcode(teste)
+
+
+
+   
+   
+   
+   
    [R_pos,thr,vcg] = ECG_peak_detect_mod_with_derivative(ecg_tmp,fs); %calcula os picos em R
    [beats,beats_av,group,offset,beats_vcg,beats_vcg_av,SNR,R_pos]=average_beats_v5(ecg_tmp,R_pos,fs,vcg); %calcula SNR
    d{1}.data{n_samples}.SNR=SNR;
@@ -55,18 +76,16 @@ arq_total=cell2table(xls_table,'VariableNames',{'exam_id', 'acquisition', 'I', '
     'avR', 'avL', 'avF', 'V1','V2', 'V3', 'V4', 'V5', 'V6', 'SNR_Overall', 'SNR_Overall_Type'});
 writetable(arq_total,['resultados_SNR_Matlab_v3.xls']);
 
-
-r = round(ecg_tmp(1,:));
-
-
-r = round(y,0)
+for n=1:12
+r = (d{1, 1}.data{1, 1}.ecg{1, 1}(n,:))' 
+% r = (ecg_tmp(1,:));
+% r = round(y,0)
 teste = regexprep(num2str(r'),'\s+',',')
 % intstr = num2str(round(d{1, 1}.data{1, 3}.ecg{1, 1}(1,:)),0);
 hashcode(teste)
-
+end
 
 intstr = num2str(round(beats_av(1,:),0))
-
 teste = regexprep(num2str(round(beats_av(1,:),0)),'\s+',',')
 clear arq;
 clear xls_table;
